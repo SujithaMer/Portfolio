@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+html {
+  @apply h-full;
+}
+body {
+  @apply h-full;
+}
+
+
+@font-face{
+  font-family: "burtons";
+  src:url("../../public/Burtons.otf");
+}
+
+@layer components{
+  .flipcard{
+    @apply w-[380px] h-[220px] bg-transparent cursor-pointer perspective
+  }
+  .bodydark{
+    @apply bg-black  text-white px-10 min-h-screen
+  }
+  .bodylight{
+    @apply bg-white  text-black px-10 min-h-screen
+  }
+  .timeline-img{
+    @apply h-24 w-24 object-cover rounded-full shadow-md border-4 border-gray-500 xs:absolute md:mx-auto md:right-0 md:left-0
+  }
+  .timeline-container{
+    @apply relative pt-2 xs:pl-40 xs:pt-0 md:w-1/2  ml-auto
+  }
+  .timeline-container-left{
+    @apply md:ml-0 md:mr-auto md:pl-0 md:pr-32
+  }
+  .timeline-para{
+    @apply bg-gradient-to-b from-cyan-500 to-gray-500 p-6 rounded-md shadow-md
+  }
+  .timeline-container-mobile{
+    @apply pt-20 mt-52
+  }
+}
